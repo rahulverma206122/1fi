@@ -11,6 +11,10 @@ import ProductDetails from "./pages/ProductDetails";
 import Confirmation from "./pages/Confirmation";
 import NotFound from "./pages/NotFound";
 
+import Profile from "./pages/Profile";
+import Limit from "./pages/Limit";
+import EmiDues from "./pages/EmiDues";
+
 function App() {
   return (
     <BrowserRouter>
@@ -32,6 +36,10 @@ function App() {
           path="/marketplace"
           element={<Marketplace />}
         />
+
+        <Route path="/emi-dues" element={<EmiDues />} />
+<Route path="/limit" element={<Limit />} />
+<Route path="/profile" element={<Profile />} />
 
         {/* Product Details */}
         <Route
