@@ -15,18 +15,41 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/shop" element={<Shop />} />
+        {/* Home */}
+        <Route
+          path="/"
+          element={<Navigate to="/shop" replace />}
+        />
 
-        <Route path="/products/:slug" element={<ProductDetails />} />
+        {/* Shop */}
+        <Route
+          path="/shop"
+          element={<Shop />}
+        />
 
+        {/* Marketplace */}
         <Route
           path="/marketplace"
           element={<Marketplace />}
         />
 
-        <Route path="*" element={<NotFound />} />
+        {/* Product Details */}
+        <Route
+          path="/products/:slug"
+          element={<ProductDetails />}
+        />
 
-        <Route path="/confirmation" element={<Confirmation />} />
+        {/* Confirmation */}
+        <Route
+          path="/confirmation"
+          element={<Confirmation />}
+        />
+
+        {/* 404 - MUST BE LAST */}
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
       </Routes>
     </BrowserRouter>
   );
